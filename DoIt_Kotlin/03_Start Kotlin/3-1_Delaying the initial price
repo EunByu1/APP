@@ -1,0 +1,15 @@
+// Delaying the initial price
+
+/*
+------------------------------------------------------------------------
+[ lateinit Terms of Use ] 
+
+  1) Available only for variables mentioned with the var keyword
+  2) Not available for Int, Long, Short, Double, Float, Boolean, Byte
+------------------------------------------------------------------------
+*/
+
+
+lateinit var data1:Int     // Error
+lateinit val data2:String  // Error
+lateinit var data3: String // Success
