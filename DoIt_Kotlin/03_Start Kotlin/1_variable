@@ -1,0 +1,9 @@
+// the difference between var and val
+
+val data1 = 10  
+var data2 = 10
+
+fun main(){
+  data1 = 20  // Error
+  data2 = 20  // Success
+}
