@@ -1,0 +1,25 @@
+// Delaying the initial price
+
+/*
+-------------------------------------------------------------------------
+[ lateinit Terms of Use ] 
+
+  ▶ Available only for variables declared with the val keyword
+  
+[ How it works ] 
+  1) The first time a variable is used, the part enclosed in brackets is automatically executed and the resulting value is assigned as the initial value of the variable
+  2) If you write multiple lines of brackets, the execution result of the last line becomes the initial value of the variable
+-------------------------------------------------------------------------
+*/
+
+val data4:Int by lazy{
+    println("in lazy.....")
+    550
+    10
+}
+
+fun main(){
+    println("in main.....")
+    println(data4 + 10)
+    println(data4 + 10)    
+}
