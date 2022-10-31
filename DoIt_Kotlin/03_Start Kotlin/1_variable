@@ -1,4 +1,4 @@
-// the difference between var and val
+// the difference between val and var
 
 val data1 = 10  
 var data2 = 10
@@ -6,4 +6,3 @@ var data2 = 10
 fun main(){
   data1 = 20  // Error
   data2 = 20  // Success
-}
