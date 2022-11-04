@@ -1,0 +1,14 @@
+fun main(){
+    // String Template
+    val name:String = "eunji"
+    val firstname:String = "Ha"
+    println("my name is $name")         // == println("my name is ${name}")
+    println("my name is $name I'm 21")  // [Error] println("my name is $nameI'm 21")
+    println("my name is ${name + firstname}I'm 21")     // spacebar X
+    println("my name is ${name + firstname} I'm 21")    // spacevar O
+
+    println("this is 2$")   // this is 2$ 
+    println("this is 2$a")  // [Error] No documentation found
+    println("this is 2\$a") // this is 2$a
+
+}
