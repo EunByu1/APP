@@ -1,0 +1,17 @@
+package com.example.kotlin
+
+fun main(){
+    helloworld_1()
+    helloworld_2()
+    println(add(4, 5))
+}
+
+// [1] Function
+// ① return 값 X
+fun helloworld_1():Unit{
+    println("Hello World!")
+}
+
+fun helloworld_2(){    // :Unit 생략 가능
+    println("Hello World!")
+}
