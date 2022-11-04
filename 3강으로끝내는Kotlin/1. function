@@ -6,7 +6,7 @@ fun main(){
     println(add(4, 5))
 }
 
-// [1] Function
+// Function
 // ① return 값 X
 fun helloworld_1():Unit{
     println("Hello World!")
