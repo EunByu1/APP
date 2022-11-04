@@ -1,0 +1,19 @@
+// Array & List
+fun array_list(){
+    val array_1 :Array<Int> = arrayOf(1, 2, 3)
+    val list_1 : List<Int>  = listOf(1, 2, 3)
+
+    var array_2:Array<Any> = arrayOf(1,"d", 3.14f)
+    var list_2:List<Any>   = listOf(1, "d", 3.11f)
+
+    array_1[0] = 3
+    list_1[0] = 3   // [Error] immutable list
+
+    var a :Int = list_1.get(0)
+    println("a = ${a}")
+
+    // mutable list
+    val arrayList = arrayListOf<Int>()
+    arrayList.add(10)
+    arrayList.add(20)
+}
