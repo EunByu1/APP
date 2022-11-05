@@ -1,0 +1,44 @@
+package com.example.kotlin
+
+val square: (Int) -> (Int) = {number:Int -> number * number}
+val nameAge:(String, Int) -> (String) = {name:String, age:Int -> "my name is ${name} I'm ${age} years old"}
+
+fun main(){
+    println(square(12))
+    println(nameAge("Eunbyul", 21))
+
+    val name:String = "Eunbyul"
+    println(name.Help())
+
+    println(extendString("Eunji", 21))
+    println(calculateGrade(97))
+
+    var lambda = {number:Double -> number == 4.321}
+    println(invokeLambda(lambda))
+}
+
+// 확장 함수
+val Help:String.() -> String = {
+    this + " 살려~"
+}
+
+fun extendString(name:String, age:Int) : String{
+    val introduceMyself : String.(Int) -> String = {"I am ${this} and ${it} years old"}
+
+    return name.introduceMyself(age)
+}
+
+// 람다의 return
+val calculateGrade: (Int) -> (String) = {
+    when(it){
+        in 0..40 -> "Fail"
+        in 41..70-> "Pass"
+        in 71..100-> "Perfect"
+        else -> "Error"
+    }
+}
+
+// 람다를 표현하는 다른 방법
+fun invokeLambda(lambda:(Double) -> Boolean) :Boolean {
+    return lambda(5.2343)
+}
