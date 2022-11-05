@@ -1,0 +1,57 @@
+package com.example.kotlin
+
+// kotlin의 class는 일반적으로 파일 class임
+// 같은 파일 내에 있더라도 접근 불가능
+
+// constructor(변수명:변수타입 = default value) => 기본 생성자 [생략 가능]
+open class Human (var age:Int = 21){    // 생성자와 property 같이 작성
+    // (주) 생성자 코드 블록
+    init {
+        println("New Human has been born!!")
+    }
+
+    // (부) 생성자 코드 블록
+    constructor(name:String, age:Int) : this(age){
+        println("this human's name is ${name}, ${age} years old")
+    }
+
+    // property 정의
+    val name = "Eunbyul"
+//  val age  = age
+    // method 정의
+    fun eatingCake(){
+        println("this is so YAMMY!~")
+    }
+
+    open fun singAsong(){
+        println("lalala")
+    }
+}
+
+
+// class 상속
+// overriding : 부모의 클래스를 자식의 클래스에 덮어 쓴다
+class Korean : Human(){
+    override fun singAsong(){
+        super.singAsong()   // 상속받은거 유지하면서
+        println("라라랄")    // 이어쓰기
+        println("my name is ${name}, ${age} years old")
+    }
+}
+
+
+fun main(){
+    val human    = Human(age = 13)
+    val stranger = Human()
+
+    human.eatingCake()
+    println("this human's name is ${human.name}")
+    println("this human's age is ${human.age}")
+    println("this stranger's age is ${human.age}")
+
+    val Human = Human(name="Eunbyul", age=13)
+
+    val korean = Korean()
+    korean.singAsong()
+
+}
