@@ -1,0 +1,20 @@
+package com.example.kotlin
+
+// Data class는 class body 필요 X
+// 비행기 티켓을 담는 Date class
+data class Ticket(val companyName : String, val name : String, var date : String, var SeatNumber : Int)
+class TicketNormal(val companyName : String, val name : String, var date : String, var SeatNumber : Int)
+// [comfile 후 자동 생성되는 것들]
+//   1) toString()
+//   2) hashCode()
+//   3) equals()
+//   4) copy()
+
+
+fun main(){
+    val ticketA = Ticket("KoreanAir", "Eunbyul", "22-11-05", 5)
+    val ticketB = TicketNormal("KoreanAir", "Eunbyul", "22-11-05", 5)
+
+    println(ticketA)    // 내용을 출력해줌   Ex) Ticket(companyName=KoreanAir, name=Eunbyul, date=22-11-05, SeatNumber=5)
+    println(ticketB)    // 메모리 주소값을 출력해줌  Ex)com.example.kotlin.TicketNormal@3796751b
+}
